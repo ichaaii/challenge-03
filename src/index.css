@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600;700&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass&family=Roboto+Slab&display=swap');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+.bg-custom-bg {
+    background-image: url('../src/assets/bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    min-height: 100vh; /* Menetapkan tinggi minimum elemen untuk memenuhi layar */
+  }
+/* :root{
+    @apply font-robot
+} */
