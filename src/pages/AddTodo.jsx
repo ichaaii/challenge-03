@@ -2,8 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link, Form } from "react-router-dom";
 import PropTypes from "prop-types";
-import Layout from "../layouts/Layout";
-
 
 
 const AddTodo = ({ onAddTodo }) => {
@@ -21,31 +19,33 @@ const AddTodo = ({ onAddTodo }) => {
   };
 
   return (
-    <Layout>
-      <div className="mt-12">
-        <h2 className="font-bold text-4xl text-center">TodoInput</h2>
-        <div className="shadow-md border-2 px-6 py-8 rounded-md">
+    <div className=" pt-10 bg-custom-bg">
+      <div className="max-w-[900px] mx-3 md:mx-auto">
+        <h2 className="font-bold text-4xl text-center mb-5 text-white">TodoInput</h2>
+        <div className="shadow-md border-2 px-6 py-10 rounded-md">
           <Form action="/" method="POST" onSubmit={handleSubmit}>
             <div className="flex flex-col space-y-2">
               <input
                 type="text"
                 onChange={(e) => setValue(e.target.value)}
-                className="border-2 px-4 py-2 rounded-md"
+                className="border-2 px-4 py-2 mb-3 rounded-md"
               />
-              <button className="font-semibold text-white py-2 rounded-md bg-teal-500 hover:bg-teal-500 active:bg-teal-700 focus:bg-teal-400">
+              <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-10"> 
+              <button className="text-center font-semibold w-full text-white py-2  rounded-md bg-costum-orange-100 hover:bg-costum-orange-200 active:bg-red-400">
                 Add Todo
               </button>
               <Link
-                className="inline-block text-center font-semibold rounded-md text-white w-full bg-red-500 hover:bg-red-600 active:bg-red-700 px-8 py-2"
+                className="text-center font-semibold w-full text-white py-2 rounded-md bg-costum-red-100 hover:bg-costum-red-200 active:bg-red-500 focus:bg-red-400"
                 to="/"
               >
                 Cancel
               </Link>
+              </div>
             </div>
           </Form>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 };
 

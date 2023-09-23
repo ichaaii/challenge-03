@@ -30,9 +30,9 @@ const Todo = ({
   return (
     <>
       {isEditing ? (
-        <div className="shadow-md border-2 px-4 py-4 rounded-md">
+        <div className="border-2 px-4 py-4 rounded-md max-w-[900px] mx-3 md:mx-auto">
           <div className="flex items-center">
-            <div className="w-full">
+            <div className="w-full max-w-[900px] mx-3 md:mx-auto">
               <form action="" onSubmit={handleSaveEditing}>
                 <div className="flex flex-col sm:flex-row sm:space-x-3 space-y-2 md:space-y-0">
                   <input
@@ -46,7 +46,7 @@ const Todo = ({
                     Save
                   </button>
                   <button
-                    className="font-semibold w-full sm:w-[20%] text-white py-2 bg-red-500 hover:bg-red-600 active:bg-red-700 focus:bg-red-300 rounded-md"
+                    className="font-semibold w-full sm:w-[20%] text-white py-2 bg-costum-red-100 hover:bg-costum-red-200 active:bg-red-500 focus:bg-red-400 rounded-md"
                     onClick={onEditing}
                   >
                     Cancel
@@ -57,10 +57,10 @@ const Todo = ({
           </div>
         </div>
       ) : (
-        <div className="max-w-[900px] mx-3 md:mx-auto flex justify-between items-center shadow-md border-2 px-4 py-4 rounded-md">
+        <div className="max-w-[900px] mx-3 md:mx-auto flex justify-between items-center  border-2 px-4 py-4 rounded-md">
           <p
             className={`md:font-semibold md:text-lg text-white ${
-              completed && "line-through text-red-500"
+              completed && "line-through text-costum-orange-200"
             }`}
           >
             {task}
@@ -72,10 +72,10 @@ const Todo = ({
               value={completed}
               onChange={() => onCompletedTodo(id)}
             />
-            <button className="text-yellow-500" onClick={onEditing}>
+            <button className="text-costum-orange-200" onClick={onEditing}>
               <FiEdit2 />
             </button>
-            <button className="text-red-500" onClick={() => onDeleteTodo(id)}>
+            <button className="text-red-600" onClick={() => onDeleteTodo(id)}>
               <FiTrash2 />
             </button>
           </div>

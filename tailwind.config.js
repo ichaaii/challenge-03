@@ -9,13 +9,34 @@ module.exports = {
         sans: ["Overpass", "sans-serif"],
       },
       colors: {
-        'costum-pink' : '#D16BA5',
-        'costum-purple' : '#86A8E7',
-        'costum-green' : '#5FFBF1',
+        'costum-red' : {
+          100: '#902849',
+          200: '#681d35',
+        },
+        'costum-pink' : {
+          100: '#D16480',
+          200: '#D1649b',
+          300: '#cb5070'
+        },
+        'costum-purple' : {
+          100: '#494074',
+          200: '#5e5295',
+          300: '#685ca5'
+        },
+        'costum-violet' : {
+          100: '#924F84',
+          200: '#924f8f',
+          300: '#a35893'
+        },
+        'costum-orange' : {
+          100: '#FC896F',
+          200: '#FC726f'
+        },
+        'costum-blue' : {
+          100: '#2B5B94',
+          200: '#2B5294'
+        },
       },
-      // backgroundImage: {
-      //   'custom-bg' :"url('../src/assets/bg.jpg')",
-      // },
     },
   },
   plugins: [],

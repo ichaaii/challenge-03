@@ -1,6 +1,5 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import Layout from "../layouts/Layout";
 import TodoHeader from "../components/Header";
 import Todo from "../components/Todo";
 import Filter from "../components/Filter";
@@ -32,7 +31,6 @@ const Home = ({
 
   return (
     <div className="bg-custom-bg ">
-    {/* <Layout> */}
       <TodoHeader onSearchTodo={onSearchTodo} />
       <Filter onFilteredTodo={handleFiltered} />
       {todos.length > 0 ? (
@@ -64,7 +62,6 @@ const Home = ({
         onDeleteAllTodo={onDeleteAllTodo}
         onDeleteDoneTodo={onDeleteDoneTodo}
       />
-    {/* </Layout> */}
     </div>
   );
 };
